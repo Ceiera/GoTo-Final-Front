@@ -14,6 +14,9 @@ const ListVideos = () => {
 
   const handleChangeSearch = (e) => {
     setTitle(e.target.value);
+    if (title === "") {
+      getVideosAll()
+    }
   }
   const handleKeySearch = (e) => {
     if (e.key === "Enter") {
