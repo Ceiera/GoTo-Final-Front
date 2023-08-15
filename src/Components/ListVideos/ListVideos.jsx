@@ -13,8 +13,9 @@ const ListVideos = () => {
   };
 
   const handleChangeSearch = (e) => {
-    setTitle(e.target.value);
-    if (title === "") {
+    const value = e.target.value
+    setTitle(value);
+    if (value === "") {
       getVideosAll()
     }
   }
